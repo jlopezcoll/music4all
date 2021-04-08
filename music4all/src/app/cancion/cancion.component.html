@@ -1,11 +1,10 @@
-<ul>
-    <li>Song: <q>{{song.title | uppercase}}</q>
-        <br>
-        <i>{{song.composer}}</i>
-        <br> by {{song.performer}}</li>
+<h2>Listado de Canciones</h2>
+
+<ul class="Canciones">
+  <li *ngFor="let cancion of Canciones">
+
+    <span class="cancion">{{cancion.title}}  </span>{{cancion.composer}}
     <hr>
-    <li>Style: {{song.style}}</li>
-    <li>Duration: {{song.time}}</li>
-    <li>Year: {{song.year}}</li>
+  </li>
+
 </ul>
-<hr>

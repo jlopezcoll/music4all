@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Cancion } from '../cancion';
+import { CANCIONES } from '../lista-canciones';
+
+
 @Component({
   selector: 'app-cancion',
   templateUrl: './cancion.component.html',
@@ -7,15 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CancionComponent implements OnInit {
 
-  song = {
-    track: 1,
-    title: "Yesterday",
-    composer: ["John Lennon", "Paul McCartney"],
-    performer: ["The Beatles"],
-    style: ["British Invasion", "Contemporary Pop/Rock", "Rock & Roll", "AM Pop", "Folk-Rock", "Psychedelic/Garage", "Soundtracks"],
-    time: "02:05",
-    year: "1965",
-  };
+
+  Canciones = CANCIONES;
+
+
+
+
 
   constructor() { }
 
