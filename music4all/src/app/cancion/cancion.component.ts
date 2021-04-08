@@ -12,15 +12,19 @@ import { CANCIONES } from '../lista-canciones';
 export class CancionComponent implements OnInit {
 
 
-  Canciones = CANCIONES;
+  Canciones = CANCIONES;//array de canciones
 
-
+  cancionSelecionada: Cancion;
 
 
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onSelectCancion (cancion:Cancion):void{ //seleccion del evento
+    console.log("Ejercicio selecionado="+cancion.title);
+    this.cancionSelecionada = cancion;
   }
 
 }

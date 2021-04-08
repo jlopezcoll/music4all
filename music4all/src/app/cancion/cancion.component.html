@@ -1,10 +1,17 @@
 <h2>Listado de Canciones</h2>
 
 <ul class="Canciones">
-  <li *ngFor="let cancion of Canciones">
+  <li *ngFor="let cancion of Canciones"(click)="onSelectCancion(cancion)"> <!-- ngfor recorre el array de canciones -->
 
     <span class="cancion">{{cancion.title}}  </span>{{cancion.composer}}
     <hr>
+    <br>
   </li>
 
 </ul>
+
+<h2> Cancion Selecionada:</h2>
+
+<div *ngIf="cancionSelecionada">    <!-- ngif muestra el mensaje solo cuando se ha selecionado una cancion -->
+<div><span>Titulo de la cancion selecionada es: </span>{{cancionSelecionada.title}}</div>
+</div>
