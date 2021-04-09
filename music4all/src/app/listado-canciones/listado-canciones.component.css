@@ -1,3 +1,30 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table thead {
+  color: #fff;
+  background-color: rgb(23, 198, 247);
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color:#CFD8;
+  /* color: white; */
+  cursor: pointer;
+}
+
+tr.selected {
+  background-color: #3412bbDC;
+  color: white;
+}
+
 li {
   cursor: pointer;
 }
