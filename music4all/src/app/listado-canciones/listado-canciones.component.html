@@ -1,0 +1,32 @@
+COMPONENTE LISTADO ZONA NAVEGABLE
+<h3>Lista de reproducción</h3>
+
+<ul>
+  <li *ngFor="let song of songs" 
+      (click)="onSelect(song)">
+    {{song.track}} - {{song.title}} - {{song.time}}
+  </li>
+</ul>
+
+<HR>
+<app-cancion 
+[songInput]="selectedSong">
+</app-cancion>
+ 
+<!-- <div *ngIf="selectedSong">
+  <div>
+      <hr>
+       <ul>
+    <li>Song: <q>{{selectedSong.title | uppercase}}</q>
+        <br>
+        <i>{{selectedSong.composer}}</i>
+        <br> by {{selectedSong.performer}}</li>
+    <hr>
+    <li>Style: {{selectedSong.style}}</li>
+    <li>Duration: {{selectedSong.time}}</li>
+    <li>Year: {{selectedSong.year}}</li>
+    </ul>
+  </div> 
+<hr> -->
+
+
