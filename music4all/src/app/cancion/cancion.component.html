@@ -3,15 +3,19 @@
 <ul class="Canciones">
   <li *ngFor="let cancion of Canciones"(click)="onSelectCancion(cancion)"> <!-- ngfor recorre el array de canciones -->
 
-    <span class="cancion">{{cancion.title}}  </span>{{cancion.composer}}
+    <span class="hovera">{{cancion.title}}  </span>{{cancion.composer}}
     <hr>
     <br>
   </li>
 
 </ul>
 
-<h2> Cancion Selecionada:</h2>
+<h2 class="selector"> Cancion Selecionada:</h2>
 
-<div *ngIf="cancionSelecionada">    <!-- ngif muestra el mensaje solo cuando se ha selecionado una cancion -->
-<div><span>Titulo de la cancion selecionada es: </span>{{cancionSelecionada.title}}</div>
+
+<div *ngIf="cancionSelecionada"><!-- ngif muestra el mensaje solo cuando se ha selecionado una cancion -->
+<div><span class="selecion">  {{cancionSelecionada.title}}   </span> </div>
+<div> </div>
 </div>
+
+<div class="spinner">s</div>

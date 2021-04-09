@@ -23,7 +23,7 @@ export class CancionComponent implements OnInit {
   ngOnInit(): void {
   }
   onSelectCancion (cancion:Cancion):void{ //seleccion del evento
-    console.log("Ejercicio selecionado="+cancion.title);
+    console.log("Cancion selecionada= "+cancion.title);
     this.cancionSelecionada = cancion;
   }
 

@@ -1,0 +1,76 @@
+.Canciones {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.Canciones li {
+  cursor: pointer;
+  position: relative;
+  justify-content: center;
+  background-color: rgb(89, 86, 133);
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  text-align:center;
+}
+.Canciones li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.Canciones li.selected {
+  background-color: #2d51b4;
+  color: white;
+}
+.Canciones li.selected:hover {
+  background-color: #BBD8DC;
+  color: white;
+}
+.selector{
+
+  position: relative;
+  left: 0;
+  background-color: rgb(89, 86, 133);
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 3px;
+  text-align:center;
+
+}
+
+.selecion{
+
+
+  position: relative;
+  justify-content: center;
+  background-color: rgb(89, 86, 133);
+  margin: .5em;
+  padding: .3em 0;
+  height: 2.6em;
+  border-radius: 6px;
+  text-align:center;
+}
+
+.spinner{
+  border: 4px solig(0, 0, 0, 1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #09f;
+
+  animation: spin 1s linear infinite;
+
+}
+
+@keyframes spin {
+  0%{
+    transform: rotate(0deg) ;
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
