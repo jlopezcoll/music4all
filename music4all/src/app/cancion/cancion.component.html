@@ -1,11 +1,17 @@
+
+COMPONENTE CANCION
+<div *ngIf="song_">
+  <div>
 <ul>
-    <li>Song: <q>{{song.title | uppercase}}</q>
+    <li>Song: <q>{{song_.title | uppercase}}</q>
         <br>
-        <i>{{song.composer}}</i>
-        <br> by {{song.performer}}</li>
+        <i>{{song_.composer}}</i>
+        <br> by {{song_.performer}}</li>
     <hr>
-    <li>Style: {{song.style}}</li>
-    <li>Duration: {{song.time}}</li>
-    <li>Year: {{song.year}}</li>
+    <li>Style: {{song_.style}}</li>
+    <li>Duration: {{song_.time}}</li>
+    <li>Year: {{song_.year}}</li>
 </ul>
+
+</div>
 <hr>
