@@ -17,6 +17,8 @@
     ]
   },
   "angularCompilerOptions": {
+    //solución error No pipe found with name 'uppercase'.ngtsc(-998004)
+    "enableIvy": true,
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
   }
