@@ -1,18 +1,41 @@
+<app-cancion
+[songInput]="selectedSong">
+</app-cancion>
+
 COMPONENTE LISTADO ZONA NAVEGABLE
 <h3>Lista de reproducción</h3>
 
-<ul>
-  <li *ngFor="let song of songs" 
+<table>
+  <thead>
+    <tr>
+      <th>Track</th>
+      <th></th>
+      <th>Title</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let song of songs" (click)="onSelect(song)" [class.selected]="song===selectedSong">
+      <td>{{song.track}}</td>
+      <td ><img src={{song.thumbnails}} class="thumb"></td>
+      <td>{{song.title}}</td>
+      <td>{{song.time}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <ul>
+  <li *ngFor="let song of songs"
       (click)="onSelect(song)">
     {{song.track}} - {{song.title}} - {{song.time}}
   </li>
-</ul>
+</ul> -->
 
-<HR>
-<app-cancion 
+<!-- <HR>
+<app-cancion
 [songInput]="selectedSong">
-</app-cancion>
- 
+</app-cancion> -->
+
 <!-- <div *ngIf="selectedSong">
   <div>
       <hr>
@@ -26,7 +49,11 @@ COMPONENTE LISTADO ZONA NAVEGABLE
     <li>Duration: {{selectedSong.time}}</li>
     <li>Year: {{selectedSong.year}}</li>
     </ul>
-  </div> 
+<<<<<<< HEAD
+  </div>
+=======
+  </div>
+>>>>>>> marcosP1
 <hr> -->
 
 
