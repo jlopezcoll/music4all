@@ -9,6 +9,7 @@ export const SONGLIST: Song[] = [
   style: ["British Invasion", "Contemporary Pop/Rock", "Rock & Roll", "AM Pop", "Folk-Rock", "Psychedelic/Garage", "Soundtracks"],
   time: "02:05",
   year: "1965",
+  thumbnails: "https://www.theaudiodb.com/images/media/artist/thumb/qpvwuv1347996168.jpg/preview",
 },
   {
   track: 2,
@@ -18,6 +19,7 @@ export const SONGLIST: Song[] = [
   style: ["Club/Dance"],
   time: "06:09",
   year: "2013",
+  thumbnails: "https://www.theaudiodb.com/images/media/artist/thumb/yxvtsq1348517112.jpg/preview",
 },
   {
   track: 3,
@@ -27,6 +29,7 @@ export const SONGLIST: Song[] = [
   style: ["Alternative R&B", "Contemporary R&B", "Pop"],
   time: "03:24",
   year: "2020",
+  thumbnails: "https://www.theaudiodb.com/images/media/artist/thumb/vtxqyp1495060298.jpg/preview",
 },
   {
   track: 4,
@@ -36,6 +39,7 @@ export const SONGLIST: Song[] = [
   style: ["Stage & Screen"],
   time: "02:45",
   year: "1967",
+  thumbnails: "https://www.theaudiodb.com/images/media/artist/thumb/tswpxx1359208506.jpg/preview",
 },
   {
   track: 5,
@@ -45,6 +49,7 @@ export const SONGLIST: Song[] = [
   style: ["Bossa Nova", "Brazilian Traditions", "Brazilian Jazz", "Global Jazz", "Mainstream Jazz"],
   time: "05:17",
   year: "1964",
+  thumbnails: "https://www.theaudiodb.com/images/media/artist/thumb/vpxxuy1403797507.jpg/preview",
 },
   {
   track: 6,
@@ -54,6 +59,7 @@ export const SONGLIST: Song[] = [
   style: ["Flamenco", "Western European Traditions", "Global Jazz", "Contemporary Flamenco", "Guitar Jazz", "Jazz Instrument"],
   time: "06:02",
   year: "1986",
+  thumbnails: "https://www.theaudiodb.com/images/media/artist/thumb/luca-paco-de-5062a474ed9ca.jpg/preview",
 },
   {
   track: 7,
@@ -63,6 +69,7 @@ export const SONGLIST: Song[] = [
   style: ["", "Instrumental Rock", "Rock & Roll", "Surf"],
   time: "03:03",
   year: "1963",
+  thumbnails: "https://www.theaudiodb.com/images/media/artist/thumb/lively-ones-the-515b4afb9a74f.jpg/preview",
 },
   {
   track: 8,
@@ -72,6 +79,7 @@ export const SONGLIST: Song[] = [
   style: ["Alternative/Indie Rock"],
   time: "06:45",
   year: "2006",
+  thumbnails: "https://www.theaudiodb.com/images/media/artist/thumb/rqvrvr1340524833.jpg/preview",
 },
   {
   track: 9,
@@ -81,6 +89,7 @@ export const SONGLIST: Song[] = [
   style: ["Album Rock", "Contemporary Pop/Rock", "Rock & Roll"],
   time: "05:47",
   year: "1978",
+  thumbnails: "https://www.theaudiodb.com/images/media/artist/thumb/qsrpru1479331864.jpg/preview",
 },
   {
   track: 10,
@@ -90,6 +99,7 @@ export const SONGLIST: Song[] = [
   style: ["Club/Dance", "Hardcore Techno", "Techno", "Rave"],
   time: "03:41",
   year: "1992",
+  thumbnails: "https://www.theaudiodb.com/images/media/artist/thumb/qxvtxy1573380365.jpg/preview",
 },
 
 ];
