@@ -6,4 +6,5 @@ export interface Song {
   style: string[];
   time: string;
   year: string;
+  thumbnails: string;
 }
