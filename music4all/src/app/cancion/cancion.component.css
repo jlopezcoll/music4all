@@ -1,0 +1,8 @@
+div.detalleCancion{
+  width: 100%;
+  border-bottom: 2px solid #ddd;
+}
+span{
+  display: inline-block;
+  width: 50%;
+}
