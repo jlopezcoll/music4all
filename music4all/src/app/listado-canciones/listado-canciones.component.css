@@ -5,7 +5,7 @@ table {
 
 table thead {
   color: #fff;
-  background-color: rgb(23, 198, 247);
+  background-color: rgb(42, 128, 248);
 }
 
 th, td {
@@ -15,14 +15,26 @@ th, td {
 }
 
 tbody tr:hover {
-  background-color:#CFD8;
+  background-color:rgba(157, 172, 250, 0.533);
   /* color: white; */
   cursor: pointer;
 }
 
-tr.selected {
+tbody tr.selected {
   background-color: #3412bbDC;
   color: white;
+}
+
+tbody tr.selected:hover {
+  background-color: #3412bbDC;
+  color: gray;
+}
+
+
+
+img.thumb{
+  height: 50px;
+  width: 50px;
 }
 
 li {
