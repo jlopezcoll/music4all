@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import { Song } from '../interfaces/song';
 import { SONGLIST } from '../mock-song-list';
 
@@ -11,16 +10,31 @@ import { SONGLIST } from '../mock-song-list';
 })
 export class ListadoCancionesComponent implements OnInit {
 
-songs: Song[] = SONGLIST;
-selectedSong?: Song;
+  @Output() cancionSeleccionada = new EventEmitter<Song>();
 
-  onSelect(listedSong: Song): void {
-     this.selectedSong = listedSong;
-   }
-
+  songsData: Song[] = SONGLIST;
+  cancionFiltrada: string = '';
+  
+  // canciones mostradas
+  songs?: Song[];
+  
+  
   constructor() { }
-
+  
   ngOnInit() {
+    this.displayList()
+  }
+
+  onSelect(song): void {
+    this.cancionSeleccionada.emit(song);
+  }
+
+  displayList(): void {
+    this.songs = this.songsData.filter((song) => {
+      if (song) {
+        return song;
+      }
+    })
   }
 
 }

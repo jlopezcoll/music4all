@@ -1,8 +1,16 @@
-<app-cancion
-[songInput]="selectedSong">
-</app-cancion>
 
-COMPONENTE LISTADO ZONA NAVEGABLE
+
+<!-- filtro -->
+<h4>Busca tu canción:</h4>
+<input
+  type="text"
+  name="filtroCanciones"
+  placeholder="Buscar..."
+  [(ngModel)]="cancionFiltrada"
+  
+/> 
+
+<!-- lista -->
 <h3>Lista de reproducción</h3>
 
 <table>
@@ -15,7 +23,9 @@ COMPONENTE LISTADO ZONA NAVEGABLE
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let song of songs" (click)="onSelect(song)" [class.selected]="song===selectedSong">
+    <!-- [class.selected]="song===selectedSong"> -->
+    <tr *ngFor="let song of songs | nameFilter: cancionFiltrada"
+      (click)="onSelect(song)">
       <td>{{song.track}}</td>
       <td ><img src={{song.thumbnails}} class="thumb"></td>
       <td>{{song.title}}</td>
@@ -24,36 +34,5 @@ COMPONENTE LISTADO ZONA NAVEGABLE
   </tbody>
 </table>
 
-<!-- <ul>
-  <li *ngFor="let song of songs"
-      (click)="onSelect(song)">
-    {{song.track}} - {{song.title}} - {{song.time}}
-  </li>
-</ul> -->
-
-<!-- <HR>
-<app-cancion
-[songInput]="selectedSong">
-</app-cancion> -->
-
-<!-- <div *ngIf="selectedSong">
-  <div>
-      <hr>
-       <ul>
-    <li>Song: <q>{{selectedSong.title | uppercase}}</q>
-        <br>
-        <i>{{selectedSong.composer}}</i>
-        <br> by {{selectedSong.performer}}</li>
-    <hr>
-    <li>Style: {{selectedSong.style}}</li>
-    <li>Duration: {{selectedSong.time}}</li>
-    <li>Year: {{selectedSong.year}}</li>
-    </ul>
-<<<<<<< HEAD
-  </div>
-=======
-  </div>
->>>>>>> marcosP1
-<hr> -->
 
 
