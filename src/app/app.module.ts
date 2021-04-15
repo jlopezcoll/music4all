@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CancionComponent } from './cancion/cancion.component';
 import { ListadoCancionesComponent } from './listado-canciones/listado-canciones.component';
-import { NameFilterPipe } from './pipes/name-filter.pipe';
+import { SongFilterPipe } from './pipes/song-filter.pipe';
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { NameFilterPipe } from './pipes/name-filter.pipe';
     AppComponent,
     CancionComponent,
     ListadoCancionesComponent,
-    NameFilterPipe,
+    SongFilterPipe,
     
   ],
   imports: [

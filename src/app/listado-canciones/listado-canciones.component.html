@@ -1,7 +1,7 @@
 
 
 <!-- filtro -->
-<h4>Busca tu canción:</h4>
+<h3>Busca tu canción/artista:</h3>
 <input
   type="text"
   name="filtroCanciones"
@@ -24,7 +24,7 @@
   </thead>
   <tbody>
     <!-- [class.selected]="song===selectedSong"> -->
-    <tr *ngFor="let song of songs | nameFilter: cancionFiltrada"
+    <tr *ngFor="let song of songs | songFilter: cancionFiltrada"
       (click)="onSelect(song)">
       <td>{{song.track}}</td>
       <td ><img src={{song.thumbnails}} class="thumb"></td>
