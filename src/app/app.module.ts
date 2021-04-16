@@ -3,16 +3,18 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { CancionComponent } from './cancion/cancion.component';
-import { ListadoCancionesComponent } from './listado-canciones/listado-canciones.component';
-import { SongFilterPipe } from './pipes/song-filter.pipe';
+import { ListadoCancionesComponent } from './components/listado-canciones/listado-canciones.component';
+import { CancionComponent } from './components/cancion/cancion.component';
+import { ReproductorComponent } from './components/reproductor/reproductor.component';
 
+import { SongFilterPipe } from './pipes/song-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CancionComponent,
     ListadoCancionesComponent,
+    ReproductorComponent,
     SongFilterPipe,
     
   ],

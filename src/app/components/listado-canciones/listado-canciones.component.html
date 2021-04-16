@@ -1,0 +1,39 @@
+<!-- Reproductor -->
+<app-reproductor></app-reproductor>
+
+<!-- filtro -->
+<h3>Busca tu canción/artista:</h3>
+<input
+  type="text"
+  name="filtroCanciones"
+  placeholder="Buscar..."
+  [(ngModel)]="cancionFiltrada"
+  
+/> 
+
+<!-- lista -->
+<h3>Lista de reproducción</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Track</th>
+      <th></th>
+      <th>Title</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- [class.selected]="song===selectedSong"> -->
+    <tr *ngFor="let song of songs | songFilter: cancionFiltrada"
+      (click)="onSelect(song)">
+      <td>{{song.track}}</td>
+      <td ><img src={{song.thumbnails}} class="thumb"></td>
+      <td>{{song.title}}</td>
+      <td>{{song.time}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+

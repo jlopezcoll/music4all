@@ -1,0 +1,15 @@
+<div *ngIf="song_" class="detalleCancion">
+  <span><img src={{song_.thumbnails}}></span>
+  <span>
+    <ul>
+      <li>Song: <q>{{song_.title | uppercase}}</q>
+          <br>
+          <i>{{song_.composer}}</i>
+          <br> by {{song_.performer}}</li>
+      <hr>
+      <li>Style: {{song_.style}}</li>
+      <li>Duration: {{song_.time}}</li>
+      <li>Year: {{song_.year}}</li>
+    </ul>
+  </span>
+</div>
