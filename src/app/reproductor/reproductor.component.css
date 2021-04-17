@@ -1,0 +1,33 @@
+i {
+  font-size: 40px;
+ }
+
+ button {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.contenedor-rep {
+  margin: auto;
+    width: 50%;
+    max-width: 500px;
+    max-height: 900px;
+    background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
+    rgb(38, 55, 150);
+    padding: 30px;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.barraprogreso {
+  width: 20rem;
+}
+
+.controles {
+
+}
