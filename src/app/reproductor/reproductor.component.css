@@ -17,10 +17,10 @@ i {
   width: 50%;
   max-width: 500px;
   max-height: 900px;
-  background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
-  rgb(38, 55, 150);
+  background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center, rgb(42, 128, 248);
   padding: 30px;
   border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 5em;
   font-weight: bold;
   align-items: center;
   display: flex;
