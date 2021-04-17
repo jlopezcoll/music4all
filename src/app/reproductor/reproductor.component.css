@@ -2,7 +2,6 @@ i {
   display: inline-block;
   margin: 12px;
   font-size: 40px;
-  border-radius: 10px 10px 0 0;
  }
 
 
@@ -17,7 +16,7 @@ i {
   width: 50%;
   max-width: 500px;
   max-height: 900px;
-  background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center, rgb(42, 128, 248);
+  background: linear-gradient(105deg, rgba(255,255,255,.2) 9%, rgba(51,56,57,1) 96%) center center, rgb(42, 128, 248);
   padding: 30px;
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 5em;
