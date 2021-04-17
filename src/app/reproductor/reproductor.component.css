@@ -1,6 +1,11 @@
 i {
+  display: inline-block;
+  margin: 12px;
   font-size: 40px;
+  border-radius: 10px 10px 0 0;
  }
+
+
 
  button {
   border-color: transparent;
