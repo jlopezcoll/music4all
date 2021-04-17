@@ -1,13 +1,17 @@
 
-<!-- Filtro -->
-<h3>Realiza tu búsqueda:</h3>
-
-<input
-type="text" name="filtroGrupo" class="busqueda" placeholder="Busca..." [(ngModel)]="cancionFiltrada"
-/>
 
 
 <h3>Lista de reproducción</h3>
+
+<!-- Filtro -->
+<form>
+  <label for="filtroGrupo"><strong>Realiza tu búsqueda: </strong></label>
+  <input
+  type="text" id="filtroGrupo" name="filtroGrupo" class="busqueda" placeholder="Busca..." [(ngModel)]="cancionFiltrada"
+  />
+
+</form>
+
 
 <table>
   <thead>

@@ -41,4 +41,25 @@ li {
   cursor: pointer;
 }
 
+.formulario{
+  display: inline-block;
+}
 
+h3 {
+  float: left;
+}
+
+form {
+  float: right;
+
+}
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 20em;
+  padding: 0.8rem;
+  border-radius: 5em;
+  border: 1px solid #39c;
+}
