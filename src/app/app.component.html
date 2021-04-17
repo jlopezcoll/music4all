@@ -1,5 +1,18 @@
 <h1>{{title}}</h1>
 <hr>
-<app-listado-canciones></app-listado-canciones>
+
+<app-cancion
+*ngIf="cancionSeleccionada"
+  [songInput]="cancionSeleccionada">
+
+</app-cancion>
+
+
+
+
+<app-listado-canciones
+  (cancionSeleccionada)="mostrarDetalles($event)">
+
+</app-listado-canciones>
 
 

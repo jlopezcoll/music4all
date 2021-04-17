@@ -1,6 +1,17 @@
-<app-cancion
-[songInput]="selectedSong">
-</app-cancion>
+
+<!-- Filtro -->
+<h3>Realiza tu búsqueda:</h3>
+
+<input
+type="text"
+name="filtroGrupo"
+class="busqueda"
+placeholder="Busca..."
+[(ngModel)]="cancionFiltrada"
+/>
+
+
+
 
 COMPONENTE LISTADO ZONA NAVEGABLE
 <h3>Lista de reproducción</h3>
@@ -15,7 +26,7 @@ COMPONENTE LISTADO ZONA NAVEGABLE
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let song of songs" (click)="onSelect(song)" [class.selected]="song===selectedSong">
+    <tr *ngFor="let song of songs | filtro: cancionFiltrada" (click)="onSelect(song)" [class.selected]="song===selectedSong">
       <td>{{song.track}}</td>
       <td ><img src={{song.thumbnails}} class="thumb"></td>
       <td>{{song.title}}</td>

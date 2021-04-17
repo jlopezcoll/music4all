@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Song } from './interfaces/song';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Music 4all';
+
+  cancionSeleccionada?: Song;
+
+  mostrarDetalles(cancion) {
+    this.cancionSeleccionada = cancion;
+  }
 }
