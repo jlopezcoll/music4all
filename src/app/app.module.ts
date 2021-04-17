@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CancionComponent } from './cancion/cancion.component';
 import { ListadoCancionesComponent } from './listado-canciones/listado-canciones.component';
 import { FiltroPipe } from './pipes/filtro.pipe';
+import { ReproductorComponent } from './reproductor/reproductor.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FiltroPipe } from './pipes/filtro.pipe';
     AppComponent,
     CancionComponent,
     ListadoCancionesComponent,
-    FiltroPipe
+    FiltroPipe,
+    ReproductorComponent
   ],
   imports: [
     BrowserModule,
