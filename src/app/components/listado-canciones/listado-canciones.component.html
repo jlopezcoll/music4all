@@ -19,6 +19,7 @@
     <tr>
       <th>Track</th>
       <th></th>
+      <th>Artista</th>
       <th>Title</th>
       <th>Time</th>
     </tr>
@@ -29,6 +30,7 @@
       (click)="onSelect(song)">
       <td>{{song.track}}</td>
       <td ><img src={{song.thumbnails}} class="thumb"></td>
+      <td>{{song.performer}}</td>
       <td>{{song.title}}</td>
       <td>{{song.time}}</td>
     </tr>
