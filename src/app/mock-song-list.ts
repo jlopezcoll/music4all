@@ -45,7 +45,7 @@ export const SONGLIST: Song[] = [
   track: 5,
   title: "The Girl from Ipanema",
   composer: ["Norman Gimbel", "Antônio Carlos Jobim", "Vinícius de Moraes"],
-  performer: ["Stan Getz", "João Gilberto feat: Antônio Carlos Jobim"],
+  performer: ["Vinícius de Moraes"],
   style: ["Bossa Nova", "Brazilian Traditions", "Brazilian Jazz", "Global Jazz", "Mainstream Jazz"],
   time: "05:17",
   year: "1964",
