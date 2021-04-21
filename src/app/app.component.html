@@ -1,13 +1,25 @@
 <h1>{{title}}</h1>
+
 <hr>
 
 <app-cancion
-  *ngIf="cancionSeleccionada"
+*ngIf="cancionSeleccionada"
   [songInput]="cancionSeleccionada">
+
 </app-cancion>
 
-<app-listado-canciones 
+<app-reproductor (cancionSeleccionada)="mostrarDetalles($event)"
+                  [song]="cancionSeleccionada">
+</app-reproductor>
+
+
+<app-listado-canciones
   (cancionSeleccionada)="mostrarDetalles($event)">
+
 </app-listado-canciones>
+
+
+
+
 
 

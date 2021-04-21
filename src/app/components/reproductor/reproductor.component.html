@@ -1,37 +1,28 @@
-<div class="reproductor-container">
+<div *ngIf="song" class="contenedor-rep">
+<!-- Interfaz del reproductor -->
 
-    <!-- Controles -->
-    <div class="controls">
-        <button>
-         <i class="fa prev">&#xf048;</i>
-       </button>
+<div class="controles">
+  <!-- Controles/Botones-->
 
-        <button>
-         <i class="fa stop">&#xf28e;</i>
-       </button>
+  <!--Play-->
+  <button (click)="play()"><i class="far fa-play-circle"></i></button>
 
-        <button>
-         <i class="fa play">&#xf01d;</i>
-       </button>
+  <!--Pause-->
+  <button (click)="pause()"><i class="far fa-pause-circle"></i></button>
 
-        <button>
-         <i class="fa pause">&#xf28c;</i>
-       </button>
+  <!--stop-->
+  <button (click)="stop()"><i class="far fa-stop-circle"></i></button>
+  <hr>
+  <!--Barra de progreso-->
+  {{ state?.readableCurrentTime }}
+  <input type="range" class="tiempo_cancion"
+        min="0" 
+        [max]="state?.duration" 
+        step="1" 
+        [value]="state?.currentTime" 
+        >
+  {{ state?.readableDuration }}
 
-        <button>
-         <i class="fa next">&#xf051;</i>
-       </button>
-    </div>
-
-    <!-- Time slider -->
-    <div class="time">
-
-        <div class="time-controls">
-            <span>00:00</span>
-            <input type="range" class="time-slider" min="0" max="100" step="1" value="0">
-            <span>00:00</span>
-        </div>
-
-    </div>
+</div>
 
 </div>

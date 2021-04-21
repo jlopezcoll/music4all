@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Song } from '../../interfaces/song';
+import { StreamState } from '../../interfaces/stream-state';
+import { AudioService } from '../../services/audio.service';
+
 
 @Component({
   selector: 'app-reproductor',
@@ -7,9 +11,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReproductorComponent implements OnInit {
 
-  constructor() { }
+  @Input() song: Song;
 
-  ngOnInit() {
+  files: Array<any> = [];
+  state: StreamState;
+
+  constructor(
+    public audioService: AudioService,
+    ) {
+    // suscrito al servicio estado del stream 
+    this.audioService.getState().subscribe(state => {
+      this.state = state;
+    });
+  }
+ngOnInit(): void {
+throw new Error('Method not implemented.');
+}
+  pause() {
+    this.audioService.pause();
+  }
+
+  play() {
+    this.audioService.play();
+  }
+
+  stop() {
+    this.audioService.stop();
   }
 
 }

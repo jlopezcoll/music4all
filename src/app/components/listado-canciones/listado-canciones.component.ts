@@ -1,6 +1,9 @@
-import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import { Song } from '../../interfaces/song';
-import { SONGLIST } from '../../mock-song-list';
+import { StreamState } from '../../interfaces/stream-state';
+import { AudioService } from '../../services/audio.service';
+import { SongService } from '../../services/song.service';
 
 
 
@@ -13,15 +16,25 @@ export class ListadoCancionesComponent implements OnInit {
 
   @Output() cancionSeleccionada = new EventEmitter<Song>();
 
-  songsData: Song[] = SONGLIST;
+  songs?: Array<any> = [];
+  state: StreamState;
+  currentFile: any = {};
   cancionFiltrada: string = '';
-  
-  // canciones mostradas
-  songs?: Song[];
-  
-  
-  constructor() { }
-  
+
+
+  constructor(public audioService: AudioService, 
+              public songService: SongService) {
+    // suscribe a recoger las canciones del servicio
+    songService.getFiles().subscribe(songs => {
+      this.songs = songs;
+    });
+
+    // suscribe a recoger al estado del stream
+    this.audioService.getState().subscribe(state => {
+      this.state = state;
+    });
+  }
+
   ngOnInit() {
     this.displayList()
   }
@@ -31,11 +44,20 @@ export class ListadoCancionesComponent implements OnInit {
   }
 
   displayList(): void {
-    this.songs = this.songsData.filter((song) => {
-      if (song) {
-        return song;
-      }
-    })
+    this.songService.getFiles().subscribe(song => {
+      this.songs = song;})
   }
+
+  playStream(url) {
+    this.audioService.playStream(url).subscribe(events => {
+    });
+  }
+
+  onOpenFile(file, index) {
+    this.currentFile = { index, file };
+    this.audioService.stop();
+    this.playStream(file.url);
+  }
+
 
 }

@@ -8,10 +8,9 @@ import { Song } from './interfaces/song';
 })
 export class AppComponent {
   title = 'Music 4all';
-  
+
   cancionSeleccionada?: Song;
 
-    // Muestra detalles
   mostrarDetalles(cancion) {
     this.cancionSeleccionada = cancion;
   }
