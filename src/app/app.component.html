@@ -4,13 +4,21 @@
 <hr>
 
 <!-- Componente canción -->
-<app-cancion *ngIf="cancionSeleccionada" [songInput]="cancionSeleccionada">
+<app-cancion *ngIf="cancionSeleccionada"
+             [songInput]="cancionSeleccionada">
 </app-cancion>
 
 <!-- Componente reproductor -->
-<app-reproductor (cancionSeleccionada)="mostrarDetalles($event)" [song]="cancionSeleccionada">
+<app-reproductor (cancionSeleccionada)="mostrarDetalles($event)"
+                  [song]="cancionSeleccionada">
 </app-reproductor>
 
 <!-- Componente listado -->
 <app-listado-canciones (cancionSeleccionada)="mostrarDetalles($event)">
 </app-listado-canciones>
+
+
+
+
+
+
