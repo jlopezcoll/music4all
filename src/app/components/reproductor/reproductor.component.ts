@@ -13,20 +13,19 @@ export class ReproductorComponent implements OnInit {
 
   @Input() song: Song;
 
-  files: Array<any> = [];
   state: StreamState;
 
   constructor(
-    public audioService: AudioService,
-    ) {
+    public audioService: AudioService) {
     // suscrito al servicio estado del stream 
     this.audioService.getState().subscribe(state => {
       this.state = state;
     });
   }
-ngOnInit(): void {
-throw new Error('Method not implemented.');
-}
+  
+  ngOnInit(): void {
+  }
+
   pause() {
     this.audioService.pause();
   }

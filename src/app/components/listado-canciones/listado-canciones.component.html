@@ -1,19 +1,18 @@
-
-
-
 <h3>Lista de reproducción</h3>
 
 <!-- Filtro -->
 <form>
   <label for="filtroGrupo"><strong>Realiza tu búsqueda: </strong></label>
-  <input
-  type="text" id="filtroGrupo" name="filtroGrupo" class="busqueda" placeholder="Busca..." [(ngModel)]="cancionFiltrada"
-  />
-
+  <input type="text" 
+         id="filtroGrupo" 
+         name="filtroGrupo" 
+         class="busqueda" 
+         placeholder="Busca..." 
+         [(ngModel)]="cancionFiltrada"/>
 </form>
 
-
 <table>
+
   <thead>
     <tr>
       <th>Track</th>
@@ -22,6 +21,7 @@
       <th>Time</th>
     </tr>
   </thead>
+
   <tbody>
     <tr *ngFor="let song of songs | filtro: cancionFiltrada; 
         let i = index" 
@@ -33,38 +33,5 @@
       <td>{{song.time}}</td>
     </tr>
   </tbody>
+  
 </table>
-
-<!-- <ul>
-  <li *ngFor="let song of songs"
-      (click)="onSelect(song)">
-    {{song.track}} - {{song.title}} - {{song.time}}
-  </li>
-</ul> -->
-
-<!-- <HR>
-<app-cancion
-[songInput]="selectedSong">
-</app-cancion> -->
-
-<!-- <div *ngIf="selectedSong">
-  <div>
-      <hr>
-       <ul>
-    <li>Song: <q>{{selectedSong.title | uppercase}}</q>
-        <br>
-        <i>{{selectedSong.composer}}</i>
-        <br> by {{selectedSong.performer}}</li>
-    <hr>
-    <li>Style: {{selectedSong.style}}</li>
-    <li>Duration: {{selectedSong.time}}</li>
-    <li>Year: {{selectedSong.year}}</li>
-    </ul>
-<<<<<<< HEAD
-  </div>
-=======
-  </div>
->>>>>>> marcosP1
-<hr> -->
-
-

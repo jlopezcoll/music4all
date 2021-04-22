@@ -1,21 +1,20 @@
+<!-- Logo -->
 <h1>{{title}}</h1>
 
 <hr>
 
-<app-cancion
-*ngIf="cancionSeleccionada"
-  [songInput]="cancionSeleccionada">
-
+<!-- Componente canción -->
+<app-cancion *ngIf="cancionSeleccionada"
+             [songInput]="cancionSeleccionada">
 </app-cancion>
 
+<!-- Componente reproductor -->
 <app-reproductor (cancionSeleccionada)="mostrarDetalles($event)"
                   [song]="cancionSeleccionada">
 </app-reproductor>
 
-
-<app-listado-canciones
-  (cancionSeleccionada)="mostrarDetalles($event)">
-
+<!-- Componente listado -->
+<app-listado-canciones (cancionSeleccionada)="mostrarDetalles($event)">
 </app-listado-canciones>
 
 

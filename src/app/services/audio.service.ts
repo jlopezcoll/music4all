@@ -10,6 +10,7 @@ import { StreamState } from "../interfaces/stream-state";
   providedIn: "root"
 })
 export class AudioService {
+
   private stop$ = new Subject();
   private audioObj = new Audio();
   audioEvents = [
@@ -24,7 +25,7 @@ export class AudioService {
     "loadstart"
   ];
 
-  
+  // Estado inicial
   private state: StreamState = {
     playing: false,
     readableCurrentTime: '',
@@ -34,11 +35,12 @@ export class AudioService {
     canplay: false,
     error: false,
   };
-  
+  // Obervable del estado
   private stateChange: BehaviorSubject<StreamState> = new BehaviorSubject(
     this.state
   );
 
+  // Toma el evento y actualiza stateChange
   private updateStateEvents(event: Event): void {
     switch (event.type) {
       case "canplay":
@@ -99,9 +101,9 @@ export class AudioService {
         // Stop Playing
         this.audioObj.pause();
         this.audioObj.currentTime = 0;
-        // remove event listeners
+        // borra event listeners
         this.removeEvents(this.audioObj, this.audioEvents, handler);
-        // reset state
+        // reinicia estado
         this.resetState();
       };
     });
@@ -133,10 +135,6 @@ export class AudioService {
 
   stop() {
     this.audioObj.load();
-  }
-
-  seekTo(seconds) {
-    this.audioObj.currentTime = seconds;
   }
 
   formatTime(time: number, format: string = "HH:mm:ss") {

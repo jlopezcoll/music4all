@@ -11,6 +11,7 @@ export class AppComponent {
 
   cancionSeleccionada?: Song;
 
+  // Detalles de canción hacia componentes
   mostrarDetalles(cancion) {
     this.cancionSeleccionada = cancion;
   }

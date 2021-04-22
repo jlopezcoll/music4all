@@ -1,11 +1,12 @@
 import { Injectable } from "@angular/core";
 import { of } from "rxjs";
+import { Song } from "../interfaces/song";
 
 @Injectable({
   providedIn: "root"
 })
 export class SongService {
-  files: any = [
+  files: Song[] = [
     {
   track: 1,
   title: "Yesterday",
