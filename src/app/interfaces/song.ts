@@ -7,4 +7,5 @@ export interface Song {
   time: string;
   year: string;
   thumbnails: string;
+  url?: string;
 }

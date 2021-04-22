@@ -1,0 +1,64 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table thead {
+    color: #fff;
+    background-color: rgb(42, 128, 248);
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: rgba(157, 172, 250, 0.533);
+    /* color: white; */
+    cursor: pointer;
+}
+
+tbody tr.selected {
+    background-color: #3412bbDC;
+    color: white;
+}
+
+tbody tr.selected:hover {
+    background-color: #3412bbDC;
+    color: gray;
+}
+
+img.thumb {
+    height: 50px;
+    width: 50px;
+}
+
+li {
+    cursor: pointer;
+}
+
+.formulario {
+    display: inline-block;
+}
+
+h3 {
+    float: left;
+}
+
+form {
+    float: right;
+}
+
+input {
+    margin-top: 2%;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 20em;
+    padding: 0.8rem;
+    border-radius: 5em;
+    border: 1px solid #39c;
+}
