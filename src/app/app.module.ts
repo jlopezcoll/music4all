@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { FiltroPipe } from './pipes/filtro.pipe';
@@ -9,6 +14,7 @@ import { SongService } from './services/song.service';
 import { CancionComponent } from './components/cancion/cancion.component';
 import { ListadoCancionesComponent } from './components/listado-canciones/listado-canciones.component';
 import { ReproductorComponent } from './components/reproductor/reproductor.component';
+
 
 
 
@@ -22,7 +28,12 @@ import { ReproductorComponent } from './components/reproductor/reproductor.compo
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [AudioService, SongService],
   bootstrap: [AppComponent]
