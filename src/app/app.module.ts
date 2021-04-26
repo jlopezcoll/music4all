@@ -9,6 +9,7 @@ import { SongService } from './services/song.service';
 import { CancionComponent } from './components/cancion/cancion.component';
 import { ListadoCancionesComponent } from './components/listado-canciones/listado-canciones.component';
 import { ReproductorComponent } from './components/reproductor/reproductor.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -22,7 +23,8 @@ import { ReproductorComponent } from './components/reproductor/reproductor.compo
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [AudioService, SongService],
   bootstrap: [AppComponent]
