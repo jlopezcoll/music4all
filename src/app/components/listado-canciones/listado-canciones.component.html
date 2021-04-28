@@ -1,37 +1,44 @@
-<h3>Lista de reproducción</h3>
+<!-- <h3>Lista de reproducción</h3> -->
 
 <!-- Filtro -->
-<form>
-  <label for="filtroGrupo"><strong>Realiza tu búsqueda: </strong></label>
-  <input type="text" 
-         id="filtroGrupo" 
-         name="filtroGrupo" 
+<mat-form-field class="form">
+  
+  <mat-label><strong>Realiza tu búsqueda&nbsp;&nbsp;</strong></mat-label>
+  <input matInput type="text" 
+         name="input" 
          class="busqueda" 
-         placeholder="Busca..." 
+         placeholder="Título o artista..." 
          [(ngModel)]="cancionFiltrada"/>
-</form>
+</mat-form-field>
 
-<table>
+<table mat-table  class="list">
 
-  <thead>
-    <tr>
+   
+  <mat-list>
+    <tr class="list-item headerlist">
       <th>Track</th>
-      <th></th>
+      <th>Artista</th>
       <th>Title</th>
       <th>Time</th>
     </tr>
-  </thead>
-
-  <tbody>
-    <tr *ngFor="let song of songs | filtro: cancionFiltrada; 
+  
+  <mat-selection-list [multiple]="false" *ngFor="let song of songs | filtro: cancionFiltrada;
         let i = index" 
         (click)="onOpenFile(song, i)" 
-        (click)="onSelect(song)" >
-      <td>{{song.track}}</td>
-      <td ><img src={{song.thumbnails}} class="thumb"></td>
-      <td>{{song.title}}</td>
-      <td>{{song.time}}</td>
-    </tr>
-  </tbody>
+        (click)="onSelect(song)">
+  
+      <div class="list-item hovered">
+    
+        <div class="item track">{{song.track}}</div>
+        <div class="item thumb"><img src={{song.thumbnails}} class="thumb"></div>
+        <div class="item text">{{song.title}}</div>
+        <div class="item text">{{song.time}}</div>
+
+      </div>
+
+  </mat-selection-list>
+  </mat-list>
+
+
   
 </table>

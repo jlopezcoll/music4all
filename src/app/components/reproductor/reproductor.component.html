@@ -1,17 +1,21 @@
+
 <div *ngIf="song" class="contenedor-rep">
+<!-- Hide  -->
+<button (click)="stop()" (click)="song = null" class="far fa-window-close"> Close</button>  
 <!-- Interfaz del reproductor -->
 
 <div class="controles">
   <!-- Controles/Botones-->
 
+ 
   <!--Play-->
-  <button (click)="play()"><i class="far fa-play-circle"></i></button>
+  <button (click)="play()"><i class="controls far fa-play-circle"></i></button>
 
   <!--Pause-->
-  <button (click)="pause()"><i class="far fa-pause-circle"></i></button>
+  <button (click)="pause()"><i class="controls far fa-pause-circle"></i></button>
 
   <!--stop-->
-  <button (click)="stop()"><i class="far fa-stop-circle"></i></button>
+  <button (click)="stop()"><i class="controls far fa-stop-circle"></i></button>
   <hr>
   <!--Barra de progreso-->
   {{ state?.readableCurrentTime }}
@@ -22,6 +26,7 @@
         [value]="state?.currentTime">
   {{ state?.readableDuration }}
 
-</div>
+</div>  
+
 
 </div>

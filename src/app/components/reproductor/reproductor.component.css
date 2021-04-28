@@ -4,11 +4,15 @@ i {
   font-size: 40px;
  }
 
-
-
  button {
   border-color: transparent;
   background-color: transparent;
+}
+
+.controls:hover {
+  background-color: #929292;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .contenedor-rep {
@@ -27,6 +31,10 @@ i {
 
 }
 
+.fa-window-close {
+  margin-left: 20rem;
+  cursor: pointer;
+}
 
 .barraprogreso {
   width: 300px;

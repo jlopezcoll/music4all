@@ -1,24 +1,18 @@
 <!-- Logo -->
-<h1>{{title}}</h1>
+<div class="logo-container" onClick="window.location.reload()">
+    <img class="logo" src="./assets/logo/logo_header.png" alt="">
+</div>
 
 <hr>
 
 <!-- Componente canción -->
-<app-cancion *ngIf="cancionSeleccionada"
-             [songInput]="cancionSeleccionada">
+<app-cancion *ngIf="cancionSeleccionada" [songInput]="cancionSeleccionada">
 </app-cancion>
 
 <!-- Componente reproductor -->
-<app-reproductor (cancionSeleccionada)="mostrarDetalles($event)"
-                  [song]="cancionSeleccionada">
+<app-reproductor (cancionSeleccionada)="mostrarDetalles($event)" [song]="cancionSeleccionada">
 </app-reproductor>
 
 <!-- Componente listado -->
 <app-listado-canciones (cancionSeleccionada)="mostrarDetalles($event)">
 </app-listado-canciones>
-
-
-
-
-
-

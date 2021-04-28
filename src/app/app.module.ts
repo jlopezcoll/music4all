@@ -9,7 +9,13 @@ import { SongService } from './services/song.service';
 import { CancionComponent } from './components/cancion/cancion.component';
 import { ListadoCancionesComponent } from './components/listado-canciones/listado-canciones.component';
 import { ReproductorComponent } from './components/reproductor/reproductor.component';
+
+// Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatListModule} from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
 
 
 
@@ -24,7 +30,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatInputModule
   ],
   providers: [AudioService, SongService],
   bootstrap: [AppComponent]
