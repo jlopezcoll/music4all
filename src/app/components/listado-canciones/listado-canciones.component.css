@@ -40,11 +40,7 @@ img.thumb{
 li {
   cursor: pointer;
 }
-/*
-.formulario{
-  display: inline-block;
-}
-*/
+
 
 h3 {
   float: left;
@@ -60,15 +56,4 @@ mat-form-field.mat-form-field {
 
 
 
-/*
-input {
-  margin-top: 2%;
-  -webkit-appearance: none;
-  appearance: none;
-  position: relative;
-  width: 20em;
-  padding: 0.8rem;
-  border-radius: 5em;
-  border: 1px solid #39c;
-}
-*/
+
