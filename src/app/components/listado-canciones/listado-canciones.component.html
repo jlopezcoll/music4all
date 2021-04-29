@@ -1,15 +1,17 @@
 <h3>Lista de reproducción</h3>
 
 <!-- Filtro -->
-<form>
-  <label for="filtroGrupo"><strong>Realiza tu búsqueda: </strong></label>
-  <input type="text" 
-         id="filtroGrupo" 
-         name="filtroGrupo" 
-         class="busqueda" 
-         placeholder="Busca..." 
+
+<mat-form-field appearance=fill>
+  <mat-label>Buscador</mat-label>
+  <input matInput type="text"
+         id="filtroGrupo"
+         name="filtroGrupo"
+         class="busqueda"
+         placeholder="Artista o canción"
          [(ngModel)]="cancionFiltrada"/>
-</form>
+</mat-form-field>
+
 
 <table>
 
@@ -23,9 +25,9 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let song of songs | filtro: cancionFiltrada; 
-        let i = index" 
-        (click)="onOpenFile(song, i)" 
+    <tr *ngFor="let song of songs | filtro: cancionFiltrada;
+        let i = index"
+        (click)="onOpenFile(song, i)"
         (click)="onSelect(song)" >
       <td>{{song.track}}</td>
       <td ><img src={{song.thumbnails}} class="thumb"></td>
@@ -33,5 +35,5 @@
       <td>{{song.time}}</td>
     </tr>
   </tbody>
-  
+
 </table>

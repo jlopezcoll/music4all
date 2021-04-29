@@ -40,20 +40,27 @@ img.thumb{
 li {
   cursor: pointer;
 }
-
+/*
 .formulario{
   display: inline-block;
 }
+*/
 
 h3 {
   float: left;
+  margin-top: 2em;
+  margin-left: 1em;
 }
 
-form {
-  float: right;
-
+mat-form-field.mat-form-field {
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 95em;
 }
 
+
+
+/*
 input {
   margin-top: 2%;
   -webkit-appearance: none;
@@ -64,3 +71,4 @@ input {
   border-radius: 5em;
   border: 1px solid #39c;
 }
+*/
