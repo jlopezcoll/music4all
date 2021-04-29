@@ -16,6 +16,10 @@ import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
+
+
 
 
 @NgModule({
@@ -34,6 +38,8 @@ import {MatInputModule} from '@angular/material/input';
     MatFormFieldModule,
     MatCardModule,
     MatInputModule,
+    MatButtonModule,
+    MatDividerModule
     
   ],
   providers: [AudioService, SongService],

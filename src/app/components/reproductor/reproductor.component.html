@@ -1,22 +1,25 @@
 
 <div *ngIf="song" class="contenedor-rep">
 <!-- Hide  -->
-<button (click)="stop()" (click)="song = null" class="far fa-window-close"> Close</button>  
+<button mat-stroked-button color="primary" (click)="stop()" (click)="song = null" class="closebtn"> Close</button>  
 <!-- Interfaz del reproductor -->
 
 <div class="controles">
   <!-- Controles/Botones-->
 
- 
+  <div class="btn-wrapper">
   <!--Play-->
-  <button (click)="play()"><i class="controls far fa-play-circle"></i></button>
+  <button mat-icon-button color="primary" (click)="play()"><i class="controls far fa-play-circle"></i></button>
 
   <!--Pause-->
-  <button (click)="pause()"><i class="controls far fa-pause-circle"></i></button>
+  <button mat-icon-button (click)="pause()"><i class="controls far fa-pause-circle"></i></button>
 
   <!--stop-->
-  <button (click)="stop()"><i class="controls far fa-stop-circle"></i></button>
-  <hr>
+  <button mat-icon-button (click)="stop()"><i class="controls far fa-stop-circle"></i></button>
+  </div>
+
+  <mat-divider></mat-divider>
+
   <!--Barra de progreso-->
   {{ state?.readableCurrentTime }}
   <input type="range" class="tiempo_cancion"

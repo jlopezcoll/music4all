@@ -1,6 +1,6 @@
 i {
-  display: inline-block;
-  margin: 12px;
+  /* display: inline-block;
+  margin: 12px; */
   font-size: 40px;
  }
 
@@ -9,10 +9,15 @@ i {
   background-color: transparent;
 }
 
-.controls:hover {
-  background-color: #929292;
-  border-radius: 50%;
-  cursor: pointer;
+.btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.mat-icon-button:hover {
+  background: lightgray;
 }
 
 .contenedor-rep {
@@ -31,7 +36,7 @@ i {
 
 }
 
-.fa-window-close {
+.closebtn {
   margin-left: 20rem;
   cursor: pointer;
 }

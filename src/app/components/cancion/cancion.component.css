@@ -3,9 +3,9 @@
   height: auto;
 }
 
-button {
+.hidebtn {
  cursor: pointer;
- margin-left: 17rem;
+ margin-left: 17rem !important;
  margin-bottom: 10px;
 }
 
