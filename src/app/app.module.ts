@@ -18,7 +18,6 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +33,8 @@ import {MatInputModule} from '@angular/material/input';
     MatListModule,
     MatFormFieldModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    
   ],
   providers: [AudioService, SongService],
   bootstrap: [AppComponent]

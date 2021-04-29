@@ -1,21 +1,29 @@
-<div *ngIf="song_" class="detalleCancion" #i>
-  <span><img src={{song_.thumbnails}}></span>
-  <span>
-    <!-- Hide  -->
-  <button (click)="song_ = 0" class="hidebtn"><i> Hide details</i>
-  </button>
-  <mat-list role="list">
-    
-      <mat-list-item role="listitem"><q>{{song_.title | uppercase}}</q></mat-list-item>
-      <mat-list-item role="listitem"><i>{{song_.composer}}</i></mat-list-item>
-      <mat-list-item role="listitem">by {{song_.performer}}</mat-list-item>
-      <hr>
-      <mat-list-item role="listitem">Style: {{song_.style}}</mat-list-item>
-      <mat-list-item role="listitem">Duration: {{song_.time}}</mat-list-item>
-      <mat-list-item role="listitem">Year: {{song_.year}}</mat-list-item>
-    
-    </mat-list>
-  </span>
- 
+<mat-card class="container" *ngIf="song_" class="detalleCancion">
   
-</div>
+    <!-- Hide  -->
+  <mat-card-actions>
+    <button (click)="song_ = 0" class="hidebtn"><i> Hide details</i></button>
+  </mat-card-actions>
+  
+  <span>
+    <mat-card>  
+      <img src={{song_.thumbnails}}>
+    </mat-card>
+
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title role="listitem"><q>{{song_.title | uppercase}}</q></mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <p><i>{{song_.composer}}</i></p>
+        <p>by <strong>{{song_.performer}}</strong></p>
+        <hr>
+        <p>Style: <i>{{song_.style}}</i></p>
+        <p>Duration: {{song_.time}}</p>
+        <p>Year: {{song_.year}}</p>
+     </mat-card-content>
+    </mat-card>
+  </span>
+
+</mat-card>
