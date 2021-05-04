@@ -25,6 +25,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { TestdbComponent } from './components/testdb/testdb.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     CancionComponent,
     ListadoCancionesComponent,
     FiltroPipe,
-    ReproductorComponent
+    ReproductorComponent,
+    TestdbComponent
   ],
   imports: [
     BrowserModule,
