@@ -20,7 +20,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 
 
-
+//Firebase
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -39,8 +41,9 @@ import {MatDividerModule} from '@angular/material/divider';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    MatDividerModule
-    
+    MatDividerModule,
+    AngularFireModule.initializeApp(environment.firebase)
+
   ],
   providers: [AudioService, SongService],
   bootstrap: [AppComponent]
