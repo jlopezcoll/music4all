@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-testdb',
@@ -6,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./testdb.component.css']
 })
 export class TestdbComponent implements OnInit {
-
-  constructor() { }
+  cancion: Observable<any[]>;
+  constructor(firestore: AngularFirestore) {
+    this.cancion = firestore.collection('songs').valueChanges();
+  }
 
   ngOnInit(): void {
   }
