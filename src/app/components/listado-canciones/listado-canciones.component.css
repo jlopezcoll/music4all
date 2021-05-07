@@ -38,7 +38,7 @@ input {
 
 .list-item {
     display: grid;
-    grid-template-columns: 10% 20% 50% 100%;
+    grid-template-columns: 10% 20% 30% 30% 10%;
 }
 
 .hovered:hover {
