@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+
 
 import { AppComponent } from './app.component';
 import { FiltroPipe } from './pipes/filtro.pipe';
@@ -20,7 +22,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 
 
-
+//Firebase
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { TestdbComponent } from './components/testdb/testdb.component';
 
 @NgModule({
   declarations: [
@@ -28,19 +35,24 @@ import {MatDividerModule} from '@angular/material/divider';
     CancionComponent,
     ListadoCancionesComponent,
     FiltroPipe,
-    ReproductorComponent
+    ReproductorComponent,
+    TestdbComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatListModule,
     MatFormFieldModule,
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    MatDividerModule
-    
+    MatDividerModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule
+
   ],
   providers: [AudioService, SongService],
   bootstrap: [AppComponent]
