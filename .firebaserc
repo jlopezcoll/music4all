@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "music4all-8cfdb": {
+      "hosting": {
+        "music4all": [
+          "music4all-8cfdb"
+        ]
+      }
+    }
+  }
+}
