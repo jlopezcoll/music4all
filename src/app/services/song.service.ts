@@ -1,12 +1,12 @@
-import { Injectable, OnInit  } from "@angular/core";
-import { Observable, of } from "rxjs";
+import { Injectable} from "@angular/core";
+import { Observable} from "rxjs";
 import { Song } from "../interfaces/song";
 import { AngularFirestore } from "@angular/fire/firestore";
 
 @Injectable({
   providedIn: "root"
 })
-export class SongService implements OnInit{
+export class SongService{
 
   songs: Observable<any[]>;
   constructor(firestore: AngularFirestore) {
@@ -15,8 +15,5 @@ export class SongService implements OnInit{
   
   getFiles():Observable<Song[]>  {
     return this.songs;
-  }
-
-  ngOnInit(): void {
   }
 }
