@@ -119,6 +119,10 @@
               "devServerTarget": "music4all:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
