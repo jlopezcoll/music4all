@@ -12,7 +12,9 @@
 
   <mat-card>
       <mat-card-header>
-        <mat-card-title role="listitem"><q>{{song_.title | uppercase}}</q></mat-card-title>
+        <mat-card-title role="listitem">
+          <q>{{song_.title | uppercase}}</q>
+        </mat-card-title>
       </mat-card-header>
       
       <mat-card-content>
@@ -22,7 +24,60 @@
         <p>Style: <i>{{song_.style}}</i></p>
         <p>Duration: {{song_.time}}</p>
         <p>Year: {{song_.year}}</p>
+
+        <div class="detail-btns">
+          <button mat-stroked-button color="primary" (click)="editSong($event, song_)">
+            Edit / Hide
+          </button>
+          
+          <button mat-stroked-button color="warn" (click)="deleteSong($event, song_)" (click)="song_ = 0">
+            Delete
+          </button>
+        </div>
+
+        <div *ngIf="isEdited && editedSong.title == song_.title">
+          <form (ngSubmit)="updateSong()">
+            <div class="inputs">
+              <hr>
+            <input type="text" name="title" [(ngModel)]="editedSong.title">
+            <input type="text" name="composer" [(ngModel)]="editedSong.composer">
+            <input type="text" name="performer" [(ngModel)]="editedSong.performer">
+            <input type="text" name="style" [(ngModel)]="editedSong.style">
+            <input type="text" name="time" [(ngModel)]="editedSong.time">
+            <input type="text" name="year" [(ngModel)]="editedSong.year">
+            <hr>
+          </div>
+            <button mat-stroked-button color="warn" type="submit">
+              Update
+            </button>
+          </form>
+        </div>
+
      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <form (ngSubmit)="addSong()">
+
+        <h2>Add a song</h2>
+        <div class="inputs">
+        <input type="text" name="ID" [(ngModel)]="newSong.id" placeholder="ID">
+        <input type="text" name="track" [(ngModel)]="newSong.track" placeholder="Track number">
+        <input type="text" name="title" [(ngModel)]="newSong.title" placeholder="Title">
+        <input type="text" name="composer" [(ngModel)]="newSong.composer" placeholder="Composer">
+        <input type="text" name="performer" [(ngModel)]="newSong.performer" placeholder="Performer">
+        <input type="text" name="style" [(ngModel)]="newSong.style" placeholder="Style">
+        <input type="text" name="time" [(ngModel)]="newSong.time" placeholder="Duration">
+        <input type="text" name="year" [(ngModel)]="newSong.year" placeholder="Year">
+        <input type="url" name="thumbnails" [(ngModel)]="newSong.thumbnails" placeholder="Image URL">
+        <input type="url" name="url" [(ngModel)]="newSong.url" placeholder="Song URL">
+        </div>
+        <br>
+        <button mat-stroked-button color="primary" type="submit">
+          Save
+        </button>
+      </form>
+      
     </mat-card>
   </span>
 

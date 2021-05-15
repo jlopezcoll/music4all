@@ -19,6 +19,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 
+//Firebase
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { TestdbComponent } from './testdb/testdb.component';
+
 
 
 
@@ -28,7 +35,8 @@ import {MatDividerModule} from '@angular/material/divider';
     CancionComponent,
     ListadoCancionesComponent,
     FiltroPipe,
-    ReproductorComponent
+    ReproductorComponent,
+    TestdbComponent
   ],
   imports: [
     BrowserModule,
@@ -39,8 +47,10 @@ import {MatDividerModule} from '@angular/material/divider';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    MatDividerModule
-    
+    MatDividerModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule
   ],
   providers: [AudioService, SongService],
   bootstrap: [AppComponent]
