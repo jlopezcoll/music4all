@@ -17,11 +17,11 @@ export class CancionComponent implements OnInit {
  isEdited: boolean = false;
 
   constructor(public songService: SongService) {
-    this.songService.getFiles().subscribe(songs => {
-      console.log(songs);
+    this.songService.getFiles()
+                        .subscribe(songs => {
       
-      this.songs = songs;
-    });
+                          this.songs = songs;
+                        });
    }
 
    addSong() {

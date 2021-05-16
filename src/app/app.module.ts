@@ -24,7 +24,6 @@ import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-import { TestdbComponent } from './testdb/testdb.component';
 
 
 
@@ -36,7 +35,7 @@ import { TestdbComponent } from './testdb/testdb.component';
     ListadoCancionesComponent,
     FiltroPipe,
     ReproductorComponent,
-    TestdbComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -17,7 +17,7 @@
   <mat-list>
     <tr class="list-item headerlist">
       <th>Track</th>
-      <th></th>
+      <th>Thumbnail</th>
       <th>Artista</th>
       <th>Title</th>
       <th>Time</th>
@@ -30,7 +30,7 @@
 
       <div class="list-item hovered">
 
-        <div class="item track">{{song.track}}</div>
+        <div class="item track">{{i + 1}}</div>
         <div class="item thumb"><img src={{song.thumbnails}} class="thumb"></div>
         <div class="item text">{{song.performer}}</div>
         <div class="item text">{{song.title}}</div>
