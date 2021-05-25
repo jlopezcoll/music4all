@@ -36,6 +36,13 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Link product
+
+[Producto 1](https://github.com/jlopezcoll/music4all/tree/v1.2).
+[Producto 2](https://github.com/angular/angular-cli/blob/master/README.md).
+[Producto 3](https://github.com/angular/angular-cli/blob/master/README.md).
+[Producto 4](https://github.com/angular/angular-cli/blob/master/README.md).
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
