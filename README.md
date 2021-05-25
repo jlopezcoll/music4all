@@ -19,10 +19,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Authors
 
-Eric Ramos Cardona
-Marcos López Collar
-Sarah Bouzoubaa
-Pau Egea Cortes
+* Eric Ramos Cardona
+* Marcos López Collar
+* Sarah Bouzoubaa
+* Pau Egea Cortes
 
 ## Running unit tests
 
