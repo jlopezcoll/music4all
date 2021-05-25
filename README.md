@@ -44,14 +44,14 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 
 * [Producto 2. ¡Música maestro! Mostrar un reproductor de música](https://github.com/jlopezcoll/music4all/tree/Eric-filtro).     
-    [Link to aplitacion v.2](https://stackblitz.com/github/jlopezcoll/music4all/tree/Eric-reproductor)
+    [Link to aplitacion v.2](https://stackblitz.com/github/jlopezcoll/music4all/tree/Eric-reproductor)       
     [Doc](https://docs.google.com/document/d/12DqylZre1MZXUVQyybGJbu7agbNxeBOi81yVevJMdNE/edit?usp=sharing)
 
 * [Producto 3. Haciendo atractiva nuestra aplicación](https://github.com/jlopezcoll/music4all/tree/Eric-Material3).     
-    [Link to aplitacion v.3](https://stackblitz.com/github/jlopezcoll/music4all/tree/Eric-Material)
+    [Link to aplitacion v.3](https://stackblitz.com/github/jlopezcoll/music4all/tree/Eric-Material)        
     [Doc](https://docs.google.com/document/d/1cu-NuwR4Fv1kJ8QWtFIfh9RmnDJU9SnL5_F4fFDWtRk/edit?usp=sharing)
 
-* [Producto 4. Convirtiendo nuestra aplicación en universal y accesible desde cualquier lugar](https://github.com/jlopezcoll/music4all/tree/main).      
+* [Producto 4. Convirtiendo nuestra aplicación en universal y accesible desde cualquier lugar](https://github.com/jlopezcoll/music4all/tree/main).            
     [Doc](https://docs.google.com/document/d/1yBA8LJT6nrPepEjs9dVdLfrGFDh97S3whN0Cy2HBny8/edit?usp=sharing)
 
 ## Further help
