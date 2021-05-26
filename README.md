@@ -4,7 +4,7 @@ Music4all is a music player app. It allows the user to play, see information abo
 
 # Video presentation
 
-https://youtu.be/pvelEGQfkd0
+https://youtu.be/CH_H6n5Ud6I
 
 ## Running the prototype
 
